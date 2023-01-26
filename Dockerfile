@@ -1,12 +1,13 @@
 FROM python:3.8.12-slim
 
-RUN pip install pipenv
+RUN pip install numpy 
+RUN pip install --no-cache-dir tensorflow
+RUN pip install fastapi
+RUN pip install pydantic
+RUN pip install pillow
+RUN pip install uvicorn
 
 WORKDIR /app
-
-COPY ["Pipfile", "Pipfile.lock", "./"]
-
-RUN pipenv install --system --deploy
 
 COPY ["model.h5", "predict.py", "./"]
 
