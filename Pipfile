@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+pydantic = "*"
+pillow = "*"
+tensorflow = "==2.9.1"
+tqdm = "*"
+pandas = "*"
+requests = "*"
+split-folders = "*"
+scipy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
